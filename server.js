@@ -28,7 +28,7 @@ app.post("/login",(req,res)=>
                     }
                     else
                     {
-                        res.status(200).json({login:"fail"});
+                        res.status(400).json({login:"fail"});
                     }
                 }
 
@@ -42,10 +42,10 @@ app.post("/login",(req,res)=>
 
 //assign port 
 
-let port =process.env.PORT || 8080
+let port =process.env.PORT || 8080;
 app.listen(port,() =>
 {
-    console.log("server started");
+    console.log("server started successfully");
 })
 
 
