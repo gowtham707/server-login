@@ -18,7 +18,7 @@ app.post("/login",(req,res)=>
         else
         {
             let db=conn.db("ecommerce");
-            db.collection("login_details").find({"uname":req.body.uname,"upwd":req.body.upwd}).toArray((err,my_arr)=>
+            db.collection("login_Details").find({"uname":req.body.uname,"upwd":req.body.upwd}).toArray((err,my_arr)=>
             {
                 if(err) throw err;
                 else{
